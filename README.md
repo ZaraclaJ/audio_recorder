@@ -41,7 +41,7 @@ The recognized extensions are :
 - .mp4
 - .aac
 
-If the file path does not finish with these extensions, the ".m4a" extension is add by default.
+If the file path does not finish with these extensions, the ".m4a" extension is added by default.
 
 ### Exceptions
 The start method raise an exception if :
