@@ -1,6 +1,6 @@
 # Audio recorder
 
-Record audio and store it locally 
+[![pub package](https://img.shields.io/pub/v/audio_recorder.svg)](https://pub.dartlang.org/packages/audio_recorder) Record audio and store it locally 
 
 ## Usage
 To use this plugin, add `audio_recorder` as a [dependency in your pubspec.yaml file](https://flutter.io/platform-plugins/).
