@@ -5,8 +5,16 @@ author: Jordan ALCARAZ <jordan.alcarazz@gmail.com>
 homepage: https://github.com/ZaraclaJ/audio_recorder
 
 dependencies:
+  path: ^1.5.1
   flutter:
     sdk: flutter
+
+environment:
+  sdk: ">=1.8.0 <2.0.0"
+
+dev_dependencies:
+  flutter_test:
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://www.dartlang.org/tools/pub/pubspec
