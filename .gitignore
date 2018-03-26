@@ -7,3 +7,11 @@ build/
 ios/.generated/
 packages
 pubspec.lock
+
+\.vscode/
+
+android/\.classpath
+
+android/\.project
+
+android/\.settings/org\.eclipse\.buildship\.core\.prefs
