@@ -39,16 +39,23 @@ class AudioRecorder {
   }
 
   static Future<Recording> stop() async {
-    Map<String, Object> response = await _channel.invokeMethod('stop');
+    Map<String, Object> response = Map.from<String,Object>(await _channel.invokeMethod('stop'));
     Recording recording = new Recording(duration: new Duration(milliseconds: response['duration']), path: response['path'],audioOutputFormat: _convertStringInAudioOutputFormat(response['audioOutputFormat']), extension: response['audioOutputFormat']);
     return recording;
   }
 
-  static Future<bool> get isRecording =>
-      _channel.invokeMethod('isRecording');
+  static Future<bool> get isRecording async {
+    bool isRecording = await _channel.invokeMethod('isRecording');
+    return isRecording;
+  }
+      
 
-  static Future<bool> get hasPermissions =>
-      _channel.invokeMethod('hasPermissions');
+  static Future<bool> get hasPermissions  async {
+    bool hasPermission = await  _channel.invokeMethod('hasPermissions');
+    return hasPermission;
+  }
+ 
+     
 
   static AudioOutputFormat _convertStringInAudioOutputFormat(String extension) {
     switch (extension) {
