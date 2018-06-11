@@ -13,6 +13,14 @@ Make sure you add the following permissions to your Android Manifest
 ```
 
 
+### iOS
+Make sure you add the following key to Info.plist for iOS
+```
+<key>NSMicrophoneUsageDescription</key>
+<string>Record audio for playback</string>
+```
+
+
 ## Example
 ``` dart
 // Import package
