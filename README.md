@@ -16,7 +16,7 @@ Make sure you add the following permissions to your Android Manifest
 ## Example
 ``` dart
 // Import package
-import 'package:flutter_audio_recorder_plugin/flutter_audio_recorder_plugin.dart';
+import 'package:audio_recorder/audio_recorder.dart';
 
 // Check permissions before starting
 bool hasPermissions = await FlutterAudioRecorderPlugin.hasPermissions;
