@@ -64,6 +64,7 @@
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Target Support Files/Pods-Runner/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Target Support Files/audio_recorder/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Target Support Files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Target Support Files/path_provider/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Runner.xcodeproj/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Runner.xcodeproj/project.xcworkspace/packages" />

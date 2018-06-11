@@ -8,6 +8,7 @@ dependencies:
   path: ^1.5.1
   flutter:
     sdk: flutter
+  path_provider: ^0.4.1
 
 environment:
   sdk: ">=1.8.0 <2.0.0"

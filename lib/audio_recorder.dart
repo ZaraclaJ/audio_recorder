@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:path/path.dart' as p;
 import 'package:flutter/services.dart';
 
-
 class AudioRecorder {
   static const MethodChannel _channel =
       const MethodChannel('audio_recorder');
