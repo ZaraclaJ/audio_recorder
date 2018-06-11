@@ -11,9 +11,6 @@ dependencies:
   cupertino_icons: ^0.1.0
 
 dev_dependencies:
-  flutter_test:
-    sdk: flutter
-
   audio_recorder:
     path: ../
 
