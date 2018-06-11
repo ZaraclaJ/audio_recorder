@@ -11,6 +11,19 @@
       <excludeFolder url="file://$MODULE_DIR$/example/.idea/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/.idea/runConfigurations/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/taskArtifacts/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/_audio_recorder_compileDebugJavaWithJavac/localClassSetAnalysis/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/_audio_recorder_compileDebugJavaWithJavac/localJarClasspathSnapshot/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/_audio_recorder_compileDebugJavaWithJavac/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/_audio_recorder_compileReleaseJavaWithJavac/localClassSetAnalysis/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/_audio_recorder_compileReleaseJavaWithJavac/localJarClasspathSnapshot/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/_audio_recorder_compileReleaseJavaWithJavac/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/3.3/tasks/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/android/.gradle/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/android/app/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/android/app/src/main/java/com/jordanalcaraz/audiorecorder/audiorecorderexample/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/android/app/src/main/java/com/jordanalcaraz/audiorecorder/packages" />
@@ -34,7 +47,22 @@
       <excludeFolder url="file://$MODULE_DIR$/example/android/gradle/wrapper/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/android/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/build" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Flutter/App.framework/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Flutter/Flutter.framework/Headers/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Flutter/Flutter.framework/Modules/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Flutter/Flutter.framework/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Flutter/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Frameworks/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Headers/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Local Podspecs/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Pods.xcodeproj/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Pods.xcodeproj/xcuserdata/jordan.xcuserdatad/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Pods.xcodeproj/xcuserdata/jordan.xcuserdatad/xcschemes/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Pods.xcodeproj/xcuserdata/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Target Support Files/Pods-Runner/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Target Support Files/audio_recorder/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/Target Support Files/packages" />
+      <excludeFolder url="file://$MODULE_DIR$/example/ios/Pods/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Runner.xcodeproj/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Runner.xcodeproj/project.xcworkspace/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/ios/Runner.xcodeproj/xcshareddata/packages" />
@@ -48,7 +76,6 @@
       <excludeFolder url="file://$MODULE_DIR$/example/ios/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/lib/packages" />
       <excludeFolder url="file://$MODULE_DIR$/example/packages" />
-      <excludeFolder url="file://$MODULE_DIR$/example/test/packages" />
       <excludeFolder url="file://$MODULE_DIR$/packages" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
