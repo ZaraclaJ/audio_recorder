@@ -27,16 +27,16 @@ Make sure you add the following key to Info.plist for iOS
 import 'package:audio_recorder/audio_recorder.dart';
 
 // Check permissions before starting
-bool hasPermissions = await FlutterAudioRecorderPlugin.hasPermissions;
+bool hasPermissions = await AudioRecorder.hasPermissions;
 
 // Get the state of the recorder
-bool isRecording = await FlutterAudioRecorderPlugin.isRecording;
+bool isRecording = await AudioRecorder.isRecording;
 
 // Start recording
-await FlutterAudioRecorderPlugin.start(path: _controller.text, audioOutputFormat: AudioOutputFormat.AAC);
+await AudioRecorder.start(path: _controller.text, audioOutputFormat: AudioOutputFormat.AAC);
 
 // Stop recording
-Recording recording = await FlutterAudioRecorderPlugin.stop();
+Recording recording = await AudioRecorder.stop();
 print("Path : ${recording.path},  Format : ${recording.audioOutputFormat},  Duration : ${recording.duration},  Extension : ${recording.extension},");
 
 ```
