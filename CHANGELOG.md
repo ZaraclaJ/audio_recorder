@@ -14,3 +14,8 @@
 
 * Added path of application directory to user's file name so that a valid file can be written in iOS.
 * Added diagnostic info to help user find the location of their recorded file.
+
+## [0.0.5] - Published August 16, 2018.
+
+* Fix readme with the right class name
+* Make Volume up when recording on iOS
