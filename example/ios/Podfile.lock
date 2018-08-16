@@ -12,11 +12,11 @@ DEPENDENCIES:
 
 EXTERNAL SOURCES:
   audio_recorder:
-    :path: /Users/jordan/audio_recorder/ios
+    :path: "/Users/jordan/audio_recorder/ios"
   Flutter:
-    :path: /Users/jordan/flutter/bin/cache/artifacts/engine/ios
+    :path: "/Users/jordan/flutter/bin/cache/artifacts/engine/ios"
   path_provider:
-    :path: /Users/jordan/.pub-cache/hosted/pub.dartlang.org/path_provider-0.4.1/ios
+    :path: "/Users/jordan/.pub-cache/hosted/pub.dartlang.org/path_provider-0.4.1/ios"
 
 SPEC CHECKSUMS:
   audio_recorder: 964d124e1109fc012c47a98c3f5d843771a75db7
@@ -25,4 +25,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: cc70c01bca487bebd110b87397f017f3b76a89f1
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3
