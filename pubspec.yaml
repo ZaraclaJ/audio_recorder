@@ -23,6 +23,11 @@ flutter:
     androidPackage: com.jordanalcaraz.audiorecorder.audiorecorder
     pluginClass: AudioRecorderPlugin
 
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  test: ^0.12.37
+
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
   #  - images/a_dot_burr.jpeg
