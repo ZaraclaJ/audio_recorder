@@ -44,7 +44,7 @@ void main() {
 
   tearDown(() async {
     log.clear();
-    if (file != null && await file.exists()) file.delete();
+    if (file != null && await file.exists()) await file.delete();
   });
 
   test('should start audio recorder', () async {
