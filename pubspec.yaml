@@ -9,6 +9,7 @@ dependencies:
   flutter:
     sdk: flutter
   path_provider: ^0.4.1
+  file: ^5.0.4
 
 environment:
   sdk: ">=2.0.0-dev.40.0.flutter-f981f09760 <3.0.0"
@@ -22,6 +23,11 @@ flutter:
   plugin:
     androidPackage: com.jordanalcaraz.audiorecorder.audiorecorder
     pluginClass: AudioRecorderPlugin
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  test: ^1.3.0
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:

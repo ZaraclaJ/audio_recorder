@@ -15,3 +15,7 @@ android/\.classpath
 android/\.project
 
 android/\.settings/org\.eclipse\.buildship\.core\.prefs
+
+# coverage
+coverage
+lcov.info
