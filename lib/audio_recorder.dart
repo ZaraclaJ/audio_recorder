@@ -68,6 +68,8 @@ class AudioRecorder {
 
   static AudioOutputFormat _convertStringInAudioOutputFormat(String extension) {
     switch (extension) {
+      case ".wav":
+        return AudioOutputFormat.WAV;
       case ".mp4":
       case ".aac":
       case ".m4a":
@@ -79,6 +81,7 @@ class AudioRecorder {
 
   static bool _isAudioOutputFormat(String extension) {
     switch (extension) {
+      case ".wav":
       case ".mp4":
       case ".aac":
       case ".m4a":
@@ -91,6 +94,8 @@ class AudioRecorder {
   static String _convertAudioOutputFormatInString(
       AudioOutputFormat outputFormat) {
     switch (outputFormat) {
+      case AudioOutputFormat.WAV:
+        return ".wav";
       case AudioOutputFormat.AAC:
         return ".m4a";
       default:
@@ -99,9 +104,7 @@ class AudioRecorder {
   }
 }
 
-enum AudioOutputFormat {
-  AAC,
-}
+enum AudioOutputFormat { AAC, WAV }
 
 class Recording {
   // File path
