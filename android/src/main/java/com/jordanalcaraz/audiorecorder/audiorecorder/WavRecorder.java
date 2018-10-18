@@ -6,14 +6,14 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import android.content.Context;
 import android.media.AudioFormat;
 import android.media.AudioRecord;
 import android.media.MediaRecorder;
-import android.os.Environment;
 
 public class WavRecorder {
     private static final int RECORDER_BPP = 16;
-    private static final String AUDIO_RECORDER_FOLDER = "AudioRecorder";
+    private static final String AUDIO_RECORDER_TEMP_FOLDER = "AudioRecorder";
     private static final String AUDIO_RECORDER_TEMP_FILE = "record_temp.raw";
     private static final int RECORDER_SAMPLERATE = 44100;
     private static final int RECORDER_CHANNELS = AudioFormat.CHANNEL_IN_MONO;
@@ -23,26 +23,20 @@ public class WavRecorder {
     private int bufferSize = 0;
     private Thread recordingThread = null;
     private boolean isRecording = false;
-    int[] bufferData;
-    int bytesRecorded;
 
-    private String output;
+    private String outputFile;
+    private Context context;
 
-    public WavRecorder(String path) {
+    public WavRecorder(Context appContext, String path) {
         bufferSize = AudioRecord.getMinBufferSize(RECORDER_SAMPLERATE,
                 RECORDER_CHANNELS, RECORDER_AUDIO_ENCODING) * 3;
-
-        // into.
-        output = path;
-    }
-
-    private String getFilename() {
-        return (output);
+        outputFile = path;
+        context = appContext;
     }
 
     private String getTempFilename() {
-        String filepath = Environment.getExternalStorageDirectory().getPath();
-        File file = new File(filepath, AUDIO_RECORDER_FOLDER);
+        String filepath = context.getExternalFilesDir(null).getPath();
+        File file = new File(filepath, AUDIO_RECORDER_TEMP_FOLDER);
 
         if (!file.exists()) {
             file.mkdirs();
@@ -57,10 +51,10 @@ public class WavRecorder {
     }
 
     public void startRecording() {
-
         recorder = new AudioRecord(MediaRecorder.AudioSource.MIC,
                 RECORDER_SAMPLERATE, RECORDER_CHANNELS,
                 RECORDER_AUDIO_ENCODING, bufferSize);
+
         int i = recorder.getState();
         if (i == 1)
             recorder.startRecording();
@@ -125,7 +119,7 @@ public class WavRecorder {
             recordingThread = null;
         }
 
-        copyWaveFile(getTempFilename(), getFilename());
+        copyWaveFile(getTempFilename(), outputFile);
         deleteTempFile();
     }
 

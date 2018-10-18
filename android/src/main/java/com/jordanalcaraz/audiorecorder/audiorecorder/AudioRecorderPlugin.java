@@ -93,13 +93,14 @@ public class AudioRecorderPlugin implements MethodCallHandler {
   }
 
   private void startRecording() {
-
-    if (isOutputFornatWav()) {
-      wavRecorder = new WavRecorder(mFilePath);
-      wavRecorder.startRecording();
-      return;
+    if (isOutputFormatWav()) {
+      startWavRecording();
+    } else {
+      startNormalRecording();
     }
+  }
 
+  private void startNormalRecording() {
     mRecorder = new MediaRecorder();
     mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
     mRecorder.setOutputFormat(getOutputFormatFromString(mExtension));
@@ -115,19 +116,30 @@ public class AudioRecorderPlugin implements MethodCallHandler {
     mRecorder.start();
   }
 
+  private void startWavRecording() {
+    wavRecorder = new WavRecorder(registrar.context(), mFilePath);
+    wavRecorder.startRecording();
+  }
+
   private void stopRecording() {
-
-    if (isOutputFornatWav()) {
-      wavRecorder.stopRecording();
-      return;
+    if (isOutputFormatWav()) {
+      stopWavRecording();
+    } else {
+      stopNormalRecording();
     }
+  }
 
+  private void stopNormalRecording() {
     if (mRecorder != null){
       mRecorder.stop();
       mRecorder.reset();
       mRecorder.release();
       mRecorder = null;
     }
+  }
+
+  private void stopWavRecording() {
+    wavRecorder.stopRecording();
   }
 
   private int getOutputFormatFromString(String outputFormat) {
@@ -141,7 +153,7 @@ public class AudioRecorderPlugin implements MethodCallHandler {
     }
   }
 
-  private boolean isOutputFornatWav() {
+  private boolean isOutputFormatWav() {
     return mExtension.equals(".wav");
   }
 }
