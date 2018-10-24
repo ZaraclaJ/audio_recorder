@@ -96,7 +96,7 @@ public class AudioRecorderPlugin implements MethodCallHandler {
     mRecorder.setAudioSource(MediaRecorder.AudioSource.MIC);
     mRecorder.setOutputFormat(getOutputFormatFromString(mExtension));
     mRecorder.setOutputFile(mFilePath);
-    mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AMR_NB);
+    mRecorder.setAudioEncoder(MediaRecorder.AudioEncoder.AAC);
 
     try {
       mRecorder.prepare();
