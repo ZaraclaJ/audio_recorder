@@ -46,7 +46,7 @@ class AudioRecorder {
 
   static Future<Recording> stop() async {
     Map<String, Object> response =
-        Map.from<String, Object>(await _channel.invokeMethod('stop'));
+        Map.from(await _channel.invokeMethod('stop'));
     Recording recording = new Recording(
         duration: new Duration(milliseconds: response['duration']),
         path: response['path'],
