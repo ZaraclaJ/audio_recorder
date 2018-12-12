@@ -36,7 +36,11 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
                 AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
             ]
             do {
-                try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default, options: .defaultToSpeaker)
+                if #available(iOS 10.0, *) {
+                    try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default, options: .defaultToSpeaker)
+                } else {
+                    // Fallback on earlier versions
+                }
                 try AVAudioSession.sharedInstance().setActive(true)
 
                 audioRecorder = try AVAudioRecorder(url: URL(string: mPath)!, settings: settings)
