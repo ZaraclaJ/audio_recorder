@@ -20,6 +20,12 @@
 * Fix readme with the right class name
 * Make Volume up when recording on iOS
 
-## [0.0.5] - Published September 9, 2018.
+## [0.0.6] - Published September 9, 2018.
 
 * Added test and code coverage report for plugin
+
+## [1.0.0] - Published July 4, 2019.
+
+* Fix a bug where the MediaRecorder.AudioEncoder format AMR_NB create a confusion for some players
+* Fix for flutter beta v0.10.2
+* Add wav file support
