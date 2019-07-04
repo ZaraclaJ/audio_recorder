@@ -1,7 +1,7 @@
 import Flutter
 import UIKit
 import AVFoundation
-    
+
 public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderDelegate {
     var isRecording = false
     var hasPermissions = false
@@ -36,9 +36,13 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
                 AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
             ]
             do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, with: AVAudioSessionCategoryOptions.defaultToSpeaker)
+                if #available(iOS 10.0, *) {
+                    try AVAudioSession.sharedInstance().setCategory(.playAndRecord, mode: .default, options: .defaultToSpeaker)
+                } else {
+                    // Fallback on earlier versions
+                }
                 try AVAudioSession.sharedInstance().setActive(true)
-                
+
                 audioRecorder = try AVAudioRecorder(url: URL(string: mPath)!, settings: settings)
                 audioRecorder.delegate = self
                 audioRecorder.record()
@@ -64,17 +68,17 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
             result(isRecording)
         case "hasPermissions":
             print("hasPermissions")
-            switch AVAudioSession.sharedInstance().recordPermission() {
-            case AVAudioSessionRecordPermission.granted:
-                NSLog("granted")
+            switch AVAudioSession.sharedInstance().recordPermission{
+            case AVAudioSession.RecordPermission.granted:
+                print("granted")
                 hasPermissions = true
                 break
-            case AVAudioSessionRecordPermission.denied:
-                NSLog("denied")
+            case AVAudioSession.RecordPermission.denied:
+                print("denied")
                 hasPermissions = false
                 break
-            case AVAudioSessionRecordPermission.undetermined:
-                NSLog("undetermined")
+            case AVAudioSession.RecordPermission.undetermined:
+                print("undetermined")
                 AVAudioSession.sharedInstance().requestRecordPermission() { [unowned self] allowed in
                     DispatchQueue.main.async {
                         if allowed {
@@ -103,4 +107,3 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
             }
         }
     }
-
