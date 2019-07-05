@@ -1,3 +1,3 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.jordanalcaraz.audiorecorder.audiorecorder">
+  package="com.jordanalcaraz.audiorecorder.audio_recorder">
 </manifest>

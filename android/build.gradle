@@ -1,12 +1,10 @@
-group 'com.jordanalcaraz.audiorecorder.audiorecorder'
+group 'com.jordanalcaraz.audiorecorder.audio_recorder'
 version '1.0-SNAPSHOT'
 
 buildscript {
     repositories {
+        google()
         jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
     }
 
     dependencies {
@@ -16,10 +14,8 @@ buildscript {
 
 rootProject.allprojects {
     repositories {
+        google()
         jcenter()
-        maven {
-            url "https://maven.google.com"
-        }
     }
 }
 
@@ -27,13 +23,9 @@ apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion '25.0.3'
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
