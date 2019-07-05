@@ -1,4 +1,4 @@
-group 'com.jordanalcaraz.audiorecorder.audio_recorder'
+group 'com.jordanalcaraz.audiorecorder.audiorecorder'
 version '1.0-SNAPSHOT'
 
 buildscript {

@@ -1,4 +1,4 @@
-package com.jordanalcaraz.audiorecorder.audio_recorder_example;
+package com.jordanalcaraz.audiorecorder.audiorecorderexample;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
