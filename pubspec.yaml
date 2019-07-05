@@ -1,6 +1,6 @@
 name: audio_recorder
 description: A Flutter plugin to record audio.
-version: 1.0.0
+version: 1.0.1
 author: Jordan ALCARAZ <jordan.alcarazz@gmail.com>
 homepage: https://github.com/ZaraclaJ/audio_recorder
 

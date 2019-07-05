@@ -29,3 +29,7 @@
 * Fix a bug where the MediaRecorder.AudioEncoder format AMR_NB create a confusion for some players
 * Fix for flutter beta v0.10.2
 * Add wav file support
+
+## [1.0.1] - Published July 5, 2019.
+
+* Fix swift version
