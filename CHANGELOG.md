@@ -33,3 +33,7 @@
 ## [1.0.1] - Published July 5, 2019.
 
 * Fix swift version
+
+## [1.0.2] - Published Marc 25, 2020.
+
+* Fix build issues on android
