@@ -37,3 +37,8 @@
 ## [1.0.2] - Published Marc 25, 2020.
 
 * Fix build issues on android
+
+## [1.1.0]
+
+* Android: Migrate to Android Embedding V2
+* Android: Use latest AGP & Gradle versions
