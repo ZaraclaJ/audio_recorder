@@ -98,6 +98,8 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
             switch format {
             case ".mp4", ".aac", ".m4a":
                 return Int(kAudioFormatMPEG4AAC)
+            case ".wav":
+                return Int(kAudioFormatLinearPCM)
             default :
                 return Int(kAudioFormatMPEG4AAC)
             }
