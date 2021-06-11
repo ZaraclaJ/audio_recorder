@@ -1,11 +1,14 @@
 name: audio_recorder_example
 description: Demonstrates how to use the audio_recorder plugin.
 
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+  
 dependencies:
   flutter:
     sdk: flutter
-  path_provider: ^1.1.0
-  file: ^5.0.4
+  path_provider: ^2.0.0
+  file: ^6.1.1
 
 
 dev_dependencies:
