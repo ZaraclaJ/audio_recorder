@@ -36,7 +36,7 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
                 AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
             ]
             do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, with: AVAudioSessionCategoryOptions.defaultToSpeaker)
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
                 try AVAudioSession.sharedInstance().setActive(true)
 
                 audioRecorder = try AVAudioRecorder(url: URL(string: mPath)!, settings: settings)
@@ -64,16 +64,16 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
             result(isRecording)
         case "hasPermissions":
             print("hasPermissions")
-            switch AVAudioSession.sharedInstance().recordPermission(){
-            case AVAudioSession.RecordPermission.granted:
+        switch AVAudioSession.sharedInstance().recordPermission {
+        case .granted:
                 print("granted")
                 hasPermissions = true
                 break
-            case AVAudioSession.RecordPermission.denied:
+        case .denied:
                 print("denied")
                 hasPermissions = false
                 break
-            case AVAudioSession.RecordPermission.undetermined:
+        case .undetermined:
                 print("undetermined")
                 AVAudioSession.sharedInstance().requestRecordPermission() { [unowned self] allowed in
                     DispatchQueue.main.async {
@@ -98,6 +98,8 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
             switch format {
             case ".mp4", ".aac", ".m4a":
                 return Int(kAudioFormatMPEG4AAC)
+            case ".wav":
+                return Int(kAudioFormatLinearPCM)
             default :
                 return Int(kAudioFormatMPEG4AAC)
             }

@@ -12,7 +12,7 @@ class AudioRecorder {
   static LocalFileSystem fs = LocalFileSystem();
 
   static Future start(
-      {String path, AudioOutputFormat audioOutputFormat}) async {
+      {String? path, AudioOutputFormat? audioOutputFormat}) async {
     String extension;
     if (path != null) {
       if (audioOutputFormat != null) {
@@ -46,27 +46,28 @@ class AudioRecorder {
 
   static Future<Recording> stop() async {
     Map<String, Object> response =
-        Map.from(await _channel.invokeMethod('stop'));
+        Map.from(await (_channel.invokeMethod('stop')));
     Recording recording = new Recording(
-        duration: new Duration(milliseconds: response['duration']),
-        path: response['path'],
-        audioOutputFormat:
-            _convertStringInAudioOutputFormat(response['audioOutputFormat']),
-        extension: response['audioOutputFormat']);
+        duration: new Duration(milliseconds: response['duration'] as int),
+        path: response['path'] as String,
+        audioOutputFormat: _convertStringInAudioOutputFormat(
+            response['audioOutputFormat'] as String?),
+        extension: response['audioOutputFormat'] as String?);
     return recording;
   }
 
   static Future<bool> get isRecording async {
-    bool isRecording = await _channel.invokeMethod('isRecording');
-    return isRecording;
+    bool? isRecording = await _channel.invokeMethod('isRecording');
+    return isRecording ?? false;
   }
 
   static Future<bool> get hasPermissions async {
-    bool hasPermission = await _channel.invokeMethod('hasPermissions');
-    return hasPermission;
+    bool? hasPermission = await _channel.invokeMethod('hasPermissions');
+    return hasPermission ?? false;
   }
 
-  static AudioOutputFormat _convertStringInAudioOutputFormat(String extension) {
+  static AudioOutputFormat? _convertStringInAudioOutputFormat(
+      String? extension) {
     switch (extension) {
       case ".wav":
         return AudioOutputFormat.WAV;
@@ -108,13 +109,13 @@ enum AudioOutputFormat { AAC, WAV }
 
 class Recording {
   // File path
-  String path;
+  String? path;
   // File extension
-  String extension;
+  String? extension;
   // Audio duration in milliseconds
-  Duration duration;
+  Duration? duration;
   // Audio output format
-  AudioOutputFormat audioOutputFormat;
+  AudioOutputFormat? audioOutputFormat;
 
   Recording({this.duration, this.path, this.audioOutputFormat, this.extension});
 }

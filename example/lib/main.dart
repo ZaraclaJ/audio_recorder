@@ -90,9 +90,9 @@ class AppBodyState extends State<AppBody> {
           }
           print("Start recording: $path");
           await AudioRecorder.start(
-              path: path, audioOutputFormat: AudioOutputFormat.AAC);
+              path: path, audioOutputFormat: AudioOutputFormat.WAV);
         } else {
-          await AudioRecorder.start();
+          await AudioRecorder.start(audioOutputFormat: AudioOutputFormat.WAV);
         }
         bool isRecording = await AudioRecorder.isRecording;
         setState(() {
@@ -118,6 +118,6 @@ class AppBodyState extends State<AppBody> {
       _recording = recording;
       _isRecording = isRecording;
     });
-    _controller.text = recording.path;
+    _controller.text = recording.path ?? '';
   }
 }
