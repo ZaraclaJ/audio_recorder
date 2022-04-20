@@ -10,9 +10,9 @@ void main() {
   final extension = '.m4a';
   final duration = 1000;
   Directory tempDirectory;
-  String path;
+  String? path;
   bool isRecording = false;
-  File file;
+  File? file;
 
   setUpAll(() async {
     tempDirectory = await Directory.systemTemp.createTemp();
@@ -44,7 +44,7 @@ void main() {
 
   tearDown(() async {
     log.clear();
-    if (file != null && await file.exists()) await file.delete();
+    if (file != null && await file!.exists()) await file!.delete();
   });
 
   test('should start audio recorder', () async {
@@ -56,7 +56,7 @@ void main() {
       isMethodCall(
         'start',
         arguments: <String, dynamic>{
-          "path": path + extension,
+          "path": path! + extension,
           "extension": extension
         },
       ),
@@ -68,13 +68,13 @@ void main() {
       () async {
     for (var supportedExtension in ['.mp4', '.aac', '.m4a']) {
       await AudioRecorder.start(
-        path: path + supportedExtension,
+        path: path! + supportedExtension,
       );
       expect(log, <Matcher>[
         isMethodCall(
           'start',
           arguments: <String, dynamic>{
-            "path": path + supportedExtension,
+            "path": path! + supportedExtension,
             "extension": supportedExtension
           },
         ),
@@ -92,7 +92,7 @@ void main() {
       isMethodCall(
         'start',
         arguments: <String, dynamic>{
-          "path": path + extension,
+          "path": path! + extension,
           "extension": extension
         },
       ),
@@ -104,13 +104,13 @@ void main() {
       () async {
     final unknownExtension = '.xxx';
     await AudioRecorder.start(
-      path: path + unknownExtension,
+      path: path! + unknownExtension,
     );
     expect(log, <Matcher>[
       isMethodCall(
         'start',
         arguments: <String, dynamic>{
-          "path": path + unknownExtension + extension,
+          "path": path! + unknownExtension + extension,
           "extension": extension
         },
       ),
@@ -120,8 +120,8 @@ void main() {
 
   test('should throw when starting audio recorder with existing file',
       () async {
-    file = File(path + extension);
-    await file.writeAsString('audio content', flush: true);
+    file = File(path! + extension);
+    await file!.writeAsString('audio content', flush: true);
     final startAudioRecorder = () async {
       await AudioRecorder.start(
         path: path,
@@ -165,7 +165,7 @@ void main() {
   });
 
   test('should check permissions', () async {
-    bool hasPermissions = await AudioRecorder.hasPermissions;
+    bool? hasPermissions = await AudioRecorder.hasPermissions;
     expect(hasPermissions, true);
   });
 }
