@@ -1,3 +1,7 @@
+## [2.0.0] - Published Apr 20, 2022.
+
+* Update to support Null Safety
+
 ## [0.0.1] - Published Feb 8, 2018.
 
 * Record audio and store it locally
