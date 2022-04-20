@@ -195,33 +195,45 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider-1.6.28",
+      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.9",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "path_provider_android",
+      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_android-2.0.12",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "path_provider_ios",
+      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_ios-2.0.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-0.0.1+2",
+      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.5",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.12"
     },
     {
       "name": "path_provider_macos",
-      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-0.0.4+8",
+      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_macos-2.0.5",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.12"
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-1.0.4",
+      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.3",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.12"
     },
     {
       "name": "path_provider_windows",
-      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-0.0.5",
+      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/path_provider_windows-2.0.5",
       "packageUri": "lib/",
-      "languageVersion": "2.11"
+      "languageVersion": "2.12"
     },
     {
       "name": "platform",
@@ -231,9 +243,9 @@
     },
     {
       "name": "plugin_platform_interface",
-      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.3",
+      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-2.1.2",
       "packageUri": "lib/",
-      "languageVersion": "2.1"
+      "languageVersion": "2.12"
     },
     {
       "name": "pool",
@@ -387,9 +399,9 @@
     },
     {
       "name": "xdg_directories",
-      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.1.2",
+      "rootUri": "file:///Users/muhammedrefaat/.pub-cache/hosted/pub.dartlang.org/xdg_directories-0.2.0+1",
       "packageUri": "lib/",
-      "languageVersion": "2.3"
+      "languageVersion": "2.12"
     },
     {
       "name": "yaml",
@@ -404,7 +416,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-04-20T09:11:50.806319Z",
+  "generated": "2022-04-20T09:15:54.620271Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
