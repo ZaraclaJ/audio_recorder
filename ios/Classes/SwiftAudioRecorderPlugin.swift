@@ -36,7 +36,7 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
                 AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
             ]
             do {
-                try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayAndRecord, with: AVAudioSessionCategoryOptions.defaultToSpeaker)
+                try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, options: AVAudioSession.CategoryOptions.defaultToSpeaker)
                 try AVAudioSession.sharedInstance().setActive(true)
 
                 audioRecorder = try AVAudioRecorder(url: URL(string: mPath)!, settings: settings)
@@ -64,7 +64,7 @@ public class SwiftAudioRecorderPlugin: NSObject, FlutterPlugin, AVAudioRecorderD
             result(isRecording)
         case "hasPermissions":
             print("hasPermissions")
-            switch AVAudioSession.sharedInstance().recordPermission(){
+            switch AVAudioSession.sharedInstance().recordPermission{
             case AVAudioSession.RecordPermission.granted:
                 print("granted")
                 hasPermissions = true
